@@ -1,0 +1,5 @@
+node_modules
+frontend/readCSV.js
+frontend/spells-full.csv
+frontend/Spells.csv
+frontend/test.js

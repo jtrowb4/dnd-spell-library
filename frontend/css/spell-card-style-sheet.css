@@ -1,0 +1,217 @@
+body {
+	font-family: Arial;
+	color: #1D1E1D;
+	margin: 0;
+	line-height: 1.5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper{
+	display: flex;
+	height: 100vh;
+}
+
+/* main content */
+.main-content{
+	flex-grow: 1;
+	padding: 20px;
+}
+
+.search-container{
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+}
+
+.input{
+	font-size: 1rem;
+}
+
+.spells-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 2rem;
+	margin-top: 1rem;
+}
+
+.side-panel-toggle{
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	display: grid;
+	place-items: center;
+	color: whitesmoke;
+	background: #C03E2E;
+	opacity: 0.875;
+	border: none;
+	border-radius: 4px 0 0 4px;
+	outline: none;
+}
+.side-panel-toggle:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+.sp-icon-close{
+	display: none !important;
+}
+
+.side-panel{
+	display: none;
+	background-image: url('../images/oldPaper.jpg');
+	background-size: cover;
+	width: 37.5vw;
+	height: 100vh;
+	flex-shrink: 0;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.375);
+}
+
+.side-panel-open .side-panel{
+	display: initial;
+}
+
+.side-panel-open .sp-icon-open{
+	display: none !important;
+}
+
+.side-panel-open .sp-icon-close{
+	display: initial !important;
+}
+
+.spell{
+	background: #C03E2E;
+	opacity: 0.875;
+	height: 3.5in;
+	width: 2.5in;
+    border: 2px;
+	border-radius: 4px;
+    padding: .5rem;
+	max-height: 500px;
+	overflow: hidden;
+	
+}
+.spell:hover{
+	/* background: linear-gradient(180deg, rgba(217,43,43,1) 0%, rgba(207,59,59,1) 40%, rgba(32,28,28,1) 100%); */
+	opacity: 1;
+	cursor: pointer;
+}
+
+.card-container{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.card-container > div > .spell-name{
+    background-color: whitesmoke;
+	font-family: Garamond, serif;
+    letter-spacing: .8pt;
+	text-transform: uppercase;
+	height: 16pt;
+	overflow: hidden;
+	font-weight: 700;
+	text-align: center;
+	font-size: 12pt;
+	border-radius: 8px 8px 0px 0px;
+	color: #1D1E1D;
+    margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.card-container > div > .spell-name:hover{
+	font-style: italic;
+	color: #C03E2E;
+}
+
+
+.card-container > div > .spell-desc{
+    background-color: whitesmoke;
+	font-family: Garamond, serif;
+    letter-spacing: .8pt;
+	text-transform: uppercase;
+	height: 10rem;
+    overflow: auto;
+    font-weight: 700;
+    text-align: center;
+    font-size: 6pt;
+    border-radius: 0px 0px 8px 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+	/* background-image: url("https://www.vectorstock.com/royalty-free-vector/tribal-fire-vector-1984668"); */
+}
+
+.card-container > .spell-info{
+	color: whitesmoke;
+	font-size: 8pt;
+	text-align: center;
+	height: 8pt;
+	margin-bottom: 2pt;
+}
+
+.card-container > .spell-info-box{
+	display: grid;      
+	grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    gap: .125rem;
+    margin-right: 1.5pt;
+	line-height: normal;
+}
+
+.card-container > .spell-info-box > .grid-item{
+	background-color: whitesmoke;
+	color: #C03E2E;
+	padding: 1pt;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: 700;
+    overflow: hidden;
+    max-height: 2rem;
+}
+.grid-item > div{
+	font-family: Arial;
+	color: #1D1E1D;
+	font-size:8pt;
+	font-weight: 400;
+}
+
+.hide{
+    display: none;
+}
+
+.search-container > div{
+	font-size: 16px;
+}
+div.search-container input[type=text] {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid grey;
+	float: left;
+	width: 62.5%;
+	background: #f1f1f1;
+}
+
+div.search-container button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: #2196F3;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
+}
+
+div.search-container button:hover {
+	background: #0b7dda;
+}
+
+div.search-container::after {
+	content: "";
+	clear: both;
+	display: table;
+}

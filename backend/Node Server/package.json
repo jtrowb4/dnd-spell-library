@@ -1,0 +1,12 @@
+{
+  "name": "dnd-tools",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "server dungeons and dragons tools",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Trowbridge",
+  "license": "ISC"
+}

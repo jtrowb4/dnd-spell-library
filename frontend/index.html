@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<title>5e Wizard Compendium</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type= "text/css" href="./css/spell-card-style-sheet.css">
+</head>
+<body>
+	<div class="wrapper side-panel-open">
+		<div class="main-content">
+			<div class="search-container">
+				<div>Spell Search:</div>
+					<input id="search" type="text" class="input" placeholder="Search.." data-search>
+					<!-- <button id="addSpell">Add Spell</button> -->
+			</div>
+			<div class="spells-container" data-spell-card-container></div>
+		</div>
+		<button class="side-panel-toggle" type="button">
+			<span class="material-icons sp-icon-open">keyboard_double_arrow_left</span>
+			<span class="material-icons sp-icon-close">keyboard_double_arrow_right</span>
+		</button>
+		<div class="side-panel">
+			<h1 id="sp-title">This is the Information Side Panel</h1>
+			<p id="sp-desc">Content to describe</p>
+		</div>
+		<template data-spell-template>
+			<div class="spell" id ="spell">
+				<div class = "card-container">
+					<div>
+						<div class = "spell-name" data-name></div>
+					</div>
+					<!-- level and school -->
+					<div class = "spell-info" data-info></div> 
+					<!-- box of 4 - Time, Range, Comp, Dur -->
+					<div class = "spell-info-box">
+						<div class = "grid-item">CASTING TIME
+							<div class = "spell-time" data-cast-time></div>
+						</div>
+						<div class = "grid-item">RANGE
+							<div class = "spell-range" data-cast-range></div>
+						</div>
+						<div class = "grid-item">COMPONENTS
+							<div class = "spell-components" data-components></div>
+						</div>
+						<div class = "grid-item">DURATION
+							<div class = "spell-duration" data-duration></div>
+						</div>
+						<div class = "grid-item">DAMAGE TYPE
+							<div class = "spell-damage" data-damage></div>
+						</div>
+						<div class = "grid-item">SAVING THROW
+							<div class = "spell-saving" data-saving-throw></div>
+						</div>
+					</div>
+					<!-- spell chant -->			
+					<div>
+						<div class = "spell-desc" data-desc></div>
+					</div>
+				</div>
+			</div>
+		</template>
+	</div>
+	<script type="text/javascript" src="main.js" ></script>
+</body>
+</html>
