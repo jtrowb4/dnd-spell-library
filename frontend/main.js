@@ -104,7 +104,7 @@ spellSearch.addEventListener("input", (e) => {
 })
 
 
-fetch("http://localhost:3000/spells")
+fetch("/spells")
 .then(response => response.json())
 .then(data =>{
 	// spellList = JSON.parse(JSON.stringify(CSVstring_to_Array(spellString))).map(spell =>{
