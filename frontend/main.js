@@ -104,7 +104,7 @@ spellSearch.addEventListener("input", (e) => {
 })
 
 
-fetch("/spells")
+fetch("https://dnd-spell-tool.vercel.app/spells")
 .then(response => response.json())
 .then(data =>{
 	// spellList = JSON.parse(JSON.stringify(CSVstring_to_Array(spellString))).map(spell =>{
