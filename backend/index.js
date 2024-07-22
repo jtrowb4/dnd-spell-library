@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 import express from "express";
+import cors from "cors";
 import path from 'path';
 import { dirname } from "path";
 import { fileURLToPath } from "url";
