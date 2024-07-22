@@ -11,6 +11,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 //initial express set up
 const app = express();
 const PORT = 3000;
+app.use(cors());
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', '..', 'frontend')));
 //database connection set up
